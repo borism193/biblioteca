@@ -1,0 +1,39 @@
+
+
+<div class="container">
+    <%= form_for(@book) do |f| %>
+    
+    <div class="form-group">
+        <%= f.label :title, 'Titulo' %>
+        <%= f.text_field :title %>
+   </div>
+
+    <div class="form-group">
+        <%= f.label :author, 'Autor' %>
+        <%= f.text_field :author %>
+    </div>
+       
+    <div class="form-group">
+        <%= f.label :status, 'Estado' %>
+        <%= f.select :status, @statuses %>
+    </div> 
+    
+    <div class="form-group">   
+        <%= f.label :borrowed_at, 'Fecha prestamo' %>
+        <%= f.datetime_select :borrowed_at %>
+    </div>  
+     
+    <div class="form-group">    
+        <%= f.label :returned_at, 'Fecha retorno' %>
+        <%= f.datetime_select :returned_at %>
+    </div>
+       
+       
+        <%= f.submit %>
+        
+    <% end %>
+   </div> 
+    
+
+
+

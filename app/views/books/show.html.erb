@@ -1,0 +1,45 @@
+<div class="container">
+    <ul class="list-group">
+    <li class="list-group-item">
+            
+            <p>Titulo:</p>
+            <%= @book.title %>
+        
+    </li>
+        <li class="list-group-item">
+        
+                <p>Autor:</p>
+                <%= @book.author %>
+        
+        </li>
+        <li class="list-group-item">
+            
+            <p>Estado:</p>
+            <%= @book.status %>
+            </p>
+        </li>
+        <li class="list-group-item">
+        
+                <p>
+                    Fecha prestamo:
+                </p>
+                <%= @book.borrowed_at %>
+            
+        </li>
+        <li class="list-group-item">
+            
+                <p>
+                    Fecha retorno:
+                </p>
+                <%= @book.returned_at %>
+        
+        </li>
+    
+    </ul>
+    <button>
+    <%= link_to 'Home', root_path %>
+        </button>
+        <button>
+    <%= link_to 'Edit', edit_book_path(@book) %>
+        </button>
+</div>
